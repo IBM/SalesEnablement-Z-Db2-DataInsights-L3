@@ -704,13 +704,17 @@
 <p><img alt="" src="_attachments/AI%20at%20scale%20on%20IBM%20Z%20using%20Db2%20for%20zOS%20SQL%20Data%20Insights%20Workbook%20-%202024-Feb-26.jpg"></p>
 <p>This demonstration will be focused on the steps that the Database Administrator takes to <strong>Enable AI</strong> against Db2 tables and views, and the SQL query patterns that business users need to adopt to perform <strong>AI-Enabled queries</strong>.</p>
 <p>This use case applies to IBM clients that have the following environment:</p>
-<p><ins>Mandatory</ins>
-- They are running Db2 for z/OS V13 Function Level 500 or later.
-- They must have installed the optional SQL Data Insights feature of Db2.</p>
-<p><ins>Nice to have</ins>
-- The subject data should include as many features as possible that describe the characteristics of the entity (for example: Client) being studied.
-- Ideally, good or bad outcomes labels are included within the data, to provide a focus for AI enabled queries to use.
-- Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible. Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.</p>
+<p><ins>Mandatory</ins></p>
+<ul>
+<li>They are running Db2 for z/OS V13 Function Level 500 or later.</li>
+<li>They must have installed the optional SQL Data Insights feature of Db2.</li>
+</ul>
+<p><ins>Nice to have</ins></p>
+<ul>
+<li>The subject data should include as many features as possible that describe the characteristics of the entity (for example: Client) being studied.</li>
+<li>Ideally, good or bad outcomes labels are included within the data, to provide a focus for AI enabled queries to use.</li>
+<li>Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible. Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.</li>
+</ul>
 <p><ins>Other considerations to be evaluated</ins></p>
 <ul>
 <li>Operational databases tend to store data in multiple different tables, such as with third normal form data models. The objective of such data structures is to separate data into different entities (tables) for flexibility. This is the opposite of what is wanted for machine learning. Clients should consider using SQL views to join data from multiple tables to include all the data fields that are of interest in AI-enabled analysis.</li>
