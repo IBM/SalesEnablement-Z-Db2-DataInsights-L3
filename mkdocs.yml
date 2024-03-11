@@ -1,0 +1,82 @@
+site_name: SalesEnablement-Z-Db2-DataInsights-L3 
+
+site_description: AI at scale on IBM Z using Db2 for z/OS SQL Data Insights - Level 3 Demonstration Guide
+site_author: Andrew R. Jones (andrewj@us.ibm.com)
+copyright: Copyright &copy; 2024 IBM
+
+# Repository
+repo_name: IBM/SalesEnablement-Z-Db2-DataInsights-L3 
+#repo_url: https://github.com/IBM/SalesEnablement-Z-Db2-DataInsights-L3
+#edit_uri: edit/master/docs
+docs_dir: docs
+
+
+nav:
+  - Introduction: 'index.md'
+  - Overview:
+    - 'Using SQL Data Insights to execute AI-enabled SQL queries scenario': 'Overview/UsingSQL.md'
+    - 'Reserve the demonstration environment': 'Overview/ReserveEnv.md'
+    - 'How to log into Z Virtual Access (zVA)': 'Overview/ZVA.md'
+  - 'Database Administrator task':
+    - 'Start the SQL Data Insights Service': 'DBA/StartDIS.md'
+    - 'Manage the SQL Data Insights Service': 'DBA/ManageDIS.md'
+    - 'Verify the trained model with simple SQL queries': 'DBA/VerifyDIS.md'
+  - 'Business Analyst tasks':
+    - 'Review the business data insights requirements': 'BA/Review.md'
+    - 'Develop SQL queries to address these requirements': 'BA/Develop.md'
+  - 'Setup the environment': 'setupEnv.md'
+  - 'Additional resources': 'Resources.md'
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+    - mkdocs-video
+    - macros
+    - search
+
+markdown_extensions:
+  - sane_lists
+  - pymdownx.details
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+
+extra:
+  generator: false
+  supportEmail: "andrewj@us.ibm.com"
+  # supportSlack: 
+    # name: "#cloud-platform-demo-feedback"
+    # url: "https://ibm-technology-sales.slack.com/archives/C03PQ47KRQE"
+  learning-plan:
+    name: "Make AI-driven decisions at scale on IBM Z using Db2 for z/OS SQL Data Insights for Technical Sales Level 3"
+    url: "https://yourlearning.ibm.com/activity/PLAN-9882CD5C1F97"
+  # offering:
+  #   name: "IBM Power Systems Virtual Server"
+  guide:
+    name: "Make AI-driven decisions at scale on IBM Z using Db2 for z/OS SQL Data Insights for Technical Sales Level 3 Demonstration Guide"
+    url: "https://ibm.github.io/SalesEnablement-Z-Db2-DataInsights-L3 "
+  demo_environment:
+    name: "GA IBM DB2 SQL Data Insight z/OS Workshop"
+    url: "https://zva.wdc1a.cirrus.ibm.com"
