@@ -1,3 +1,5 @@
+Explore these resources to learn more.
+
 - Demonstration video: <a href="https://www.youtube.com/watch?v=i7eww7hxHeI" target="_blank">IBM Db2 SQL Data Insights - Uncover insights based on hidden relationships in Db2 for z/OS data</a>
 
 - Articles about SQL Data Insights:
