@@ -13,7 +13,7 @@ docs_dir: docs
 
 nav:
   - Introduction: 'index.md'
-  - Overview:
+  - Overview: 
     - 'Using SQL Data Insights to execute AI-enabled SQL queries scenario': 'Overview/UsingSQL.md'
     - 'Reserve the demonstration environment': 'Overview/ReserveEnv.md'
     - 'How to log into Z Virtual Access (zVA)': 'Overview/ZVA.md'
@@ -67,7 +67,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  
+
 extra:
   generator: false
   supportEmail: "andrewj@us.ibm.com"

@@ -23,7 +23,7 @@ The illustration below represents how Db2 for z/OS SQL Data Insights would be us
 
 - The Clients table holds information about the clients of a business.
 - The related model table is created when SQL Data Insights is instructed to Enable AI.
-- The example SQL query aims to find the top 20 clients who are most similar to the client with customerid of 3668-QPYBK. The client in question may be of interest because of good or bad outcomes to be encouraged or avoided in other clients.
+- The example SQL query aims to find the top 20 clients who are most similar to the client with customer ID of 3668-QPYBK. The client in question may be of interest because of good or bad outcomes to be encouraged or avoided in other clients.
 - The first version of SQL Data Insights (DB2 13 FL500) provides 3 built-in functions: AI_SIMILARITY, AI_SEMANTIC_CLUSTER and AI_ANALOGY. All AI functions are based on the unsupervised neural network model that has been trained to find natural patterns in the data. In the case of the AI_SIMILARITY function, it computes a similarity score between any two records in an AI-enabled table.
 - SQL queries can be submitted from anywhere with a SQL connection to Db2.
 
@@ -40,11 +40,11 @@ This use case applies to IBM clients that have the following environment:
 
 ^^Nice to have^^
 
-- The subject data should include as many features as possible that describe the characteristics of the entity (for example: Client) being studied.
-- Ideally, good or bad outcomes labels are included within the data, to provide a focus for AI enabled queries to use.
+- The subject data should include as many **features** as possible that describe the characteristics of the entity (for example: Client) being studied.
+- Ideally, good or bad outcomes **labels** are included within the data, to provide a focus for AI enabled queries to use.
 - Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible. Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.
 
 ^^Other considerations to be evaluated^^
 
 - Operational databases tend to store data in multiple different tables, such as with third normal form data models. The objective of such data structures is to separate data into different entities (tables) for flexibility. This is the opposite of what is wanted for machine learning. Clients should consider using SQL views to join data from multiple tables to include all the data fields that are of interest in AI-enabled analysis.
-- Data stored outside Db2 for z/OS can also be used by SQL Data Insights. For example, data in VSAM datasets or IMS databases can be references in Db2 table functions, so that they too can be AI-Enabled.
+- Data stored outside Db2 for z/OS can also be used by SQL Data Insights. For example, data in Virtual Storage Access Method (VSAM) datasets or Information Management System (IMS) databases can be references in Db2 table functions, so that they too can be **AI-Enabled**.
