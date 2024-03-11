@@ -13,7 +13,7 @@
     - Artificial Intelligence (AI) concepts
     - Machine Learning and Deep Learning model concepts
   
-## Introduction - Db2 for z/OS SQL Data Insights
+## Db2 for z/OS SQL Data Insights
 
 Artificial Intelligence (AI) has become an essential capability for enterprises to exploit and master. The data that is stored and managed in operational databases contains information that is invaluable to making informed decisions. Sometimes the insights can be extracted using conventional Structured Query Language (SQL) queries. But when the information clients seek is hidden in non-obvious patterns in the data, conventional SQL is not flexible enough to see those patterns.
 

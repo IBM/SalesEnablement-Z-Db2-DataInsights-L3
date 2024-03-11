@@ -62,7 +62,12 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.keys
   - attr_list
-
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  
 extra:
   generator: false
   supportEmail: "andrewj@us.ibm.com"
