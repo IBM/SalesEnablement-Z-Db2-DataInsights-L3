@@ -1,1 +1,6 @@
-To be written....
+- Youtube Video Demo of SQL Data Insights available at: https://www.youtube.com/watch?v=i7eww7hxHeI
+- Articles about SQL Data Insights
+  - Use IBM Db2 SQL Data Insights to uncover hidden relationships in your data - Available at https://developer.ibm.com/articles/use-ibm-db2-sql-data-insights-to-uncover-hidden-relationships-in-your-data/
+  - Db2 SQL Data Insights: Discover hidden insights within your Db2 Data – Available at https://mydigitalpublication.com/publication/?i=748150&article_id=4274544&view=articleBrowser
+- Db2 Documentation available at: https://www.ibm.com/docs/en/db2-for-zos/13
+- Enabling Db2 for IBM Db2 Analytics Accelerator for z/OS documentation available at: https://www.ibm.com/docs/en/db2-for-zos/13?topic=enabling-db2-db2-analytics-accelerator-zos
