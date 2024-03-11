@@ -34,10 +34,12 @@ This demonstration will be focused on the steps that the Database Administrator 
 This use case applies to IBM clients that have the following environment:
 
 ^^Mandatory^^
+
 - They are running Db2 for z/OS V13 Function Level 500 or later.
 - They must have installed the optional SQL Data Insights feature of Db2.
 
 ^^Nice to have^^
+
 - The subject data should include as many features as possible that describe the characteristics of the entity (for example: Client) being studied.
 - Ideally, good or bad outcomes labels are included within the data, to provide a focus for AI enabled queries to use.
 - Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible. Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.
