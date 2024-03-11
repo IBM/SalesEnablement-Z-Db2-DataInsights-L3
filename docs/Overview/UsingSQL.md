@@ -1,10 +1,8 @@
-## What is covered in the workbook
 
-**Hands-on demonstration architecture**
+The image below depicts the high-level architecture used in this demonstration environment.
 
 ![](_attachments/AI%20at%20scale%20on%20IBM%20Z%20using%20Db2%20for%20zOS%20SQL%20Data%20Insights%20Workbook%20-%202024-Feb-26.jpg)
 
-## Using SQL Data Insights to execute AI-enabled SQL queries scenario
 
 In this demonstration scenario, the client’s operational data is stored in Db2 for z/OS, and they wish to take advantage of machine learning techniques to gain better insights into their customer’s needs by learning from patterns in the data that they already possess. They plan to develop predictive models in due course to assist with customer care and the point of interaction, but they wish to start by using AI to gain better insights into their customers’ patterns of activities. You will demonstrate how SQL Data Insights builds an unsupervised Deep Learning model of the clients’ data, so that they may perform simple SQL analysis to take advantage of AI insights for the analytics phase of their journey to AI.
 
