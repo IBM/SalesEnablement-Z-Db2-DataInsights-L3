@@ -633,7 +633,103 @@
 
   <h1>Verify the trained model with simple SQL queries</h1>
 
-<p>To be written....</p>
+<div><p class="annotate">You can use any SQL client tool you like to write SQL queries that use SQL Data Insights. For example, when using a 3270 emulator you could use SQL Processor Using File Input (SPUFI) (1) or Query Management Facility (QMF) (2). Alternatively, from a Windows client you could use a developer Integrated Development Environment (IDE), or an analytics tool like QMF workstation.</p>
+<ol>
+<li>SPUFI is a database facility invented by IBM for interfacing with their Db2 system. It is accessed from within TSO ISPF from the DB2I Primary Option menu. SPUFI allows direct input of SQL commands in the TSO environment, rather than having them embedded within a program. Learn more about SPUFI <a href="https://en.wikipedia.org/wiki/IBM_Spufi" target="_blank">here</a>.</li>
+<li>QMF is a security-rich, simple-to-use business analytics and visualization tool optimized for IBM Z® data sources. Learn more about QMF <a href="https://www.ibm.com/products/db2-qmf" target="_blank">here</a>.</li>
+</ol>
+<p>Since you are exploiting AI capabilities, it seems appropriate to use tools that are commonly used by data scientists. After all, one of the use cases for SQL Data Insights is to aid the data scientist perform data analysis (or data wrangling).</p>
+<p>The Windows image of this demonstration has been pre-installed with Anaconda, Python, Jupyter Notebooks, and several data science libraries. You will invoke Jupyter Notebooks from Microsoft Visual Studio (VS) Code, to build your SQL queries.</p>
+<ul>
+<li>
+<p>Click the <strong>Visual Studio Code</strong> desktop icon <strong>(A)</strong> to open VS Code.</p>
+<p><img alt="" src="../_attachments/vsCodeDesktop.jpg"></p>
+</li>
+<li>
+<p>Open the <strong>Notebook</strong> named <strong>SQL_Data_Insights.ipynb</strong> if not already open. Click <strong>File</strong> <strong>(A)</strong>, then click <strong>Open File</strong> <strong>(B)</strong>, then click <strong>SQL_Data_Insights.ipynb</strong> <strong>(C)</strong>, and then click <strong>Open</strong> <strong>(D)</strong>.</p>
+<p><img alt="" src="../_attachments/vsOpenNotebook.jpg"></p>
+</li>
+</ul>
+<p>Once the Notebook renders in VS, you may want to adjust the settings as follows.</p>
+<ul>
+<li>Use ++Ctrl+-++ or ++Ctrl++++ to adjust the font size of all panels in the display.</li>
+</ul>
+<div class="annotate">
+<ul>
+<li>
+<p>Verify the Python kernel <strong>cw01</strong> loaded <strong>(A)</strong> (1). If needed (or if prompted), click <strong>Restart</strong> <strong>(B)</strong> to restart the kernel (2).</p>
+<p><img alt="" src="../_attachments/vsVerifyKernel.jpg"></p>
+</li>
+</ul>
+</div>
+<ol>
+<li>This demonstration environment has no internet connectivity, and the cw01 kernel has all the libraries needed for this demonstration. They were previously installed so that you can run the notebooks.</li>
+<li>To start the notebook from scratch click <strong>Restart</strong> again to clear all outputs.</li>
+</ol>
+<p>Next, run each step of the Jupyter notebook to connect to the data base and execute SQL statements.</p>
+<div class="admonition tip">
+<p class="admonition-title">To run a Jupyter notebook step</p>
+<p>To run the instructions in a cell, you highlight the cell (a blue line will appear to the left of the cell) and click the <strong>arrow</strong> <strong>(A)</strong> to invoke the code in that cell or use the keyboard shortcut: ++Ctrl+Alt+Enter++.</p>
+<p><img alt="" src="../_attachments/vsRunACell.jpg"></p>
+</div>
+<p>The notebook advises to train the model, but this has already been done. You don’t need to perform this step again. </p>
+<p>The first cell does not need to be run because the libraries were installed before the system was disconnected to the internet. If you execute this cell, it should tell you that all libraries were already satisfied. These are the libraries used: Python, "connect to Db2", and "format SQL results sets from Db2 nicely".</p>
+<ul>
+<li>
+<p>Run the two cells used to import environment variables and libraries into the Python environment <strong>(A)</strong>.</p>
+<p><img alt="" src="../_attachments/vsImportEnv.jpg"></p>
+</li>
+</ul>
+<div class="annotate">
+<ul>
+<li>
+<p>Run the next two cells to load the SQL extension (from the sqlalchemy package) <strong>(A)</strong> and to establish a JDBC type 4 connection to Db2 on z/OS <strong>(B)</strong> (1).</p>
+<p><img alt="" src="../_attachments/vsSQLLoadandJDBCConnect.jpg"></p>
+</li>
+</ul>
+</div>
+<ol>
+<li>The Db2 subsystem being used is a location name of <strong>DALLASD</strong> running on wg31.washington.ibm.com on port 5045. You are connecting with user ID <strong>IBMUSER</strong> and password <strong>SYS1</strong>.</li>
+</ol>
+<p>Now you are ready to run SQL queries against the Db2 instance. Start with a simple SQL Select against the <strong>EXPLORE.PENGUINS</strong> table.</p>
+<ul>
+<li>
+<p>Run the cell with the <strong>SQL select</strong> command <strong>(A)</strong>.</p>
+<p><img alt="" src="../_attachments/vsSQLSelect.jpg"></p>
+</li>
+</ul>
+<p>The Penguin dataset represents a data science classification challenge. Based on several observations, is it possible to accurately predict what species any penguin is? The output shown above contains the answer.</p>
+<p>To validate the ability of SQL Data Insights to find similarities and differences between records, you need to create a view that excludes the answers. Thus, why the EXPLORE.PENGUINS_UNC view created and trained in the previous steps.</p>
+<ul>
+<li>
+<p>Run the <strong>SQL select</strong> against the <strong>explore.penguins_unc</strong> view <strong>(A)</strong>.</p>
+<p><img alt="" src="../_attachments/vsSelectP-UNC.jpg"></p>
+</li>
+</ul>
+<p>Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the PENGUINS_UNC table that has an associated trained model.</p>
+<ul>
+<li>
+<p>Run the <strong>AI_SIMILARITY SQL </strong>select<strong> against the </strong>explore.penguins_unc<strong> view </strong>(A)**.</p>
+<p><img alt="" src="../_attachments/vsAISimilaritySQL.jpg"></p>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Review the results!</p>
+<p>The SQL query uses the <strong>AI_SIMILARITY</strong> function to measure the similarity of Penguin #11 to all other penguins in the dataset. At this point you are not trying to assess the accuracy of the SQL Data Insights model; rather, you are merely verifying that the model table has been trained and can be utilized by the SQL Data Insights built in SQL functions.</p>
+<p>The result set returns all the columns from the <strong>PENGUINS_UNC</strong> table, plus an additional column (<strong>similarity</strong>) which is the similarity of each penguin with Penguin #11.</p>
+<p>Note that this similarity score is not an absolute score or probability. It is a determination of the similarity of two records based on the unsupervised Deep Learning model that was trained by SQL Data Insights. When you write SQL queries you need to develop a feel for what that means in practical terms by designing your AI-enabled queries accordingly.</p>
+</div>
+<p>It would be good to perform some sort of accuracy check to check whether SQL Data Insights has done a good job of discovering the patterns in the penguin data measurements. You have the means to do that because you have the original dataset that included the species as determined by the Antarctic scientists who took all the measurements of the penguins in the first place.</p>
+<p>Penguin #11 was determined to be an Adelie Penguin.</p>
+<ul>
+<li>Penguins with IDs from 1 to 152 were Adelie Penguins.</li>
+<li>Penguins with IDs from 153 to 276 were Gentoo Penguins.</li>
+<li>Penguins with IDs from 277 to 344 were Chinstrap Penguins.</li>
+</ul>
+<p>You can write SQL queries to select:
+- the average similarity of Penguin #11 to all other Adelie penguins
+- the average similarity of Penguin #11 to all Gentoo penguins
+- the average similarity of Penguin #11 to all Chinstrap penguins</p></div>
 
 
 
