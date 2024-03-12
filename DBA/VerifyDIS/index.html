@@ -669,7 +669,7 @@
 <p>Next, run each step of the Jupyter notebook to connect to the data base and execute SQL statements.</p>
 <div class="admonition tip">
 <p class="admonition-title">To run a Jupyter notebook step</p>
-<p>To run the instructions in a cell, you highlight the cell (a blue line will appear to the left of the cell) and click the <strong>arrow</strong> <strong>(A)</strong> to invoke the code in that cell or use the keyboard shortcut: ++Ctrl+Alt+Enter++.</p>
+<p>To run the instructions in a cell, you highlight the cell (a blue line will appear to the left of the cell) and click the <strong>arrow</strong> <strong>(A)</strong> to invoke the code in that cell or use the keyboard shortcut: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>.</p>
 <p><img alt="" src="../_attachments/vsRunACell.jpg"></p>
 </div>
 <p>The notebook advises to train the model, but this has already been done. You don’t need to perform this step again. </p>
@@ -699,14 +699,14 @@
 </li>
 </ul>
 <p>The Penguin dataset represents a data science classification challenge. Based on several observations, is it possible to accurately predict what species any penguin is? The output shown above contains the answer.</p>
-<p>To validate the ability of SQL Data Insights to find similarities and differences between records, you need to create a view that excludes the answers. Thus, why the EXPLORE.PENGUINS_UNC view created and trained in the previous steps.</p>
+<p>To validate the ability of SQL Data Insights to find similarities and differences between records, you need to create a view that excludes the answers. Thus, why the <strong>EXPLORE.PENGUINS_UNC</strong> view was created and trained in the previous steps.</p>
 <ul>
 <li>
 <p>Run the <strong>SQL select</strong> against the <strong>explore.penguins_unc</strong> view <strong>(A)</strong>.</p>
 <p><img alt="" src="../_attachments/vsSelectP-UNC.jpg"></p>
 </li>
 </ul>
-<p>Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the PENGUINS_UNC table that has an associated trained model.</p>
+<p>Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the <strong>PENGUINS_UNC</strong> table that has an associated trained model.</p>
 <ul>
 <li>
 <p>Run the <strong>AI_SIMILARITY SQL </strong>select<strong> against the </strong>explore.penguins_unc<strong> view </strong>(A)**.</p>
@@ -729,7 +729,19 @@
 <p>You can write SQL queries to select:
 - the average similarity of Penguin #11 to all other Adelie penguins
 - the average similarity of Penguin #11 to all Gentoo penguins
-- the average similarity of Penguin #11 to all Chinstrap penguins</p></div>
+- the average similarity of Penguin #11 to all Chinstrap penguins</p>
+<div class="annotate">
+<ul>
+<li>
+<p>Run the SQL query to select the average similarity of Penguin #11 to all other Adelie penguins <strong>(A)</strong> (1).</p>
+<p><img alt="" src="../_attachments/vsSQL-11-Adelie.jpg"></p>
+</li>
+</ul>
+</div>
+<ol>
+<li>SQL query
+   <code>%sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 1 and 152 ) select AVG(similarity) from V1 ;</code></li>
+</ol></div>
 
 
 
