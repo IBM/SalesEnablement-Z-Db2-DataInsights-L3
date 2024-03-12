@@ -68,7 +68,7 @@ To validate the ability of SQL Data Insights to find similarities and difference
 
 Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the **PENGUINS_UNC** table that has an associated trained model.
 
-- Run the **AI_SIMILARITY SQL **select** against the **explore.penguins_unc** view **(A)**.
+- Run the **AI_SIMILARITY SQL select** against the **explore.penguins_unc** view **(A)**.
 
     ![](_attachments/vsAISimilaritySQL.jpg)
 
@@ -84,9 +84,9 @@ It would be good to perform some sort of accuracy check to check whether SQL Dat
 
 Penguin #11 was determined to be an Adelie Penguin.
 
-- Penguins with IDs from 1 to 152 were Adelie Penguins.
-- Penguins with IDs from 153 to 276 were Gentoo Penguins.
-- Penguins with IDs from 277 to 344 were Chinstrap Penguins.
+- Penguins with IDs from 1 to 152 are Adelie Penguins.
+- Penguins with IDs from 153 to 276 are Gentoo Penguins.
+- Penguins with IDs from 277 to 344 are Chinstrap Penguins.
 
 You can write SQL queries to select:
 - the average similarity of Penguin #11 to all other Adelie penguins
@@ -94,7 +94,7 @@ You can write SQL queries to select:
 - the average similarity of Penguin #11 to all Chinstrap penguins
 
 <div class="annotate" markdown>
-- Run the SQL query to select the average similarity of Penguin #11 to all other Adelie penguins **(A)** (1).
+- Run the **SQL query** to select the **average similarity** of Penguin #11 to all other Adelie penguins **(A)** (1).
 
     ![](_attachments/vsSQL-11-Adelie.jpg)
 
@@ -107,7 +107,7 @@ You can write SQL queries to select:
    ```%sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 1 and 152 ) select AVG(similarity) from V1 ;```
 
 <div class="annotate" markdown>
-- Run the SQL query to select the average similarity of Penguin #11 to all all Gentoo penguins **(A)** (1).
+- Run the **SQL query** to select the **average similarity** of Penguin #11 to all all Gentoo penguins **(A)** (1).
 
     ![](_attachments/vsSQL-11-Gentoo.jpg)
 
@@ -119,8 +119,8 @@ You can write SQL queries to select:
 1. SQL query
    ```.sql %sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 153 and 276 ) select AVG(similarity) from V1 ;```
 
-   <div class="annotate" markdown>
-- Run the SQL query to select the average similarity of Penguin #11 to all all Chinstrap penguins **(A)** (1).
+<div class="annotate" markdown>
+- Run the **SQL query** to select the **average similarity** of Penguin #11 to all all Chinstrap penguins **(A)** (1).
 
     ![](_attachments/vsSQL-11-Chinstrap.jpg)
 
