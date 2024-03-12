@@ -78,6 +78,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#start-the-sql-data-insights-service" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -392,6 +397,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Start the SQL Data Insights Service
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -401,6 +417,30 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-sql-data-insights-service" class="md-nav__link">
+    Start the SQL Data Insights Service
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -593,6 +633,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-sql-data-insights-service" class="md-nav__link">
+    Start the SQL Data Insights Service
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -608,7 +663,46 @@
 
   <h1>Start the SQL Data Insights Service</h1>
 
-<p>To be written....</p>
+<div><p>When instructions are given to type text, the text is usually like below:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Sample text to enter.
+</code></pre></div>
+<p>This is to help indicate that you need to type or copy/paste all of the text. Notice the <strong>Copy to clipboard</strong> button (<img alt="" src="../_attachments/copyToClipboard.png">). Use it to copy the text and then use your system's paste option (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-v">V</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>) to enter the text.</p>
+<h2 id="start-the-sql-data-insights-service">Start the SQL Data Insights Service</h2>
+<ul>
+<li>
+<p>Open the <strong>Putty terminal</strong>, bu clicking on teh proper desktop icon <strong>(A)</strong>.</p>
+<p><img alt="" src="../_attachments/desktop.jpg"> <img alt="" src="../_attachments/puttyIcon.jpg"></p>
+</li>
+<li>
+<p>Highlight the saved session called <strong>wg31_large</strong> <strong>(A)</strong>, and click <strong>Load</strong> <strong>(B)</strong>. Click <strong>Open</strong> <strong>(C)</strong> to open a ssh terminal session to the z/OS host: wg31.</p>
+<p><img alt="" src="../_attachments/puttySession.jpg"></p>
+</li>
+<li>
+<p>Login with user <strong>(A)</strong></p>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>IBMUSER
+</code></pre></div>
+and password <strong>(B)</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SYS1
+</code></pre></div>
+<p><img alt="" src="../_attachments/puttyLogin.jpg"></p>
+</li>
+<li>
+<p>Switch user to <strong>AIDBADM</strong> using the <strong>su</strong> command <strong>(A)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>su - adibadm
+</code></pre></div>
+<p>and enter the password <strong>(B)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>AIDBADM
+</code></pre></div>
+<p><img alt="" src="../_attachments/suCMD.jpg"></p>
+</li>
+<li>
+<p>Stat the SQL Data Insights instance using the command below <strong>(A)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sqldi.sh start
+</code></pre></div>
+<p><img alt="" src="../_attachments/sqldiStart.jpg"></p>
+<p>The SQL Data Insights Services runs under Unix System Services (USS), which is why you have started it from the USS command line. It can easily be wrapped in a JCL member and run as a started task with system automation.</p>
+</li>
+</ul></div>
 
 
 
