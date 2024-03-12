@@ -3,9 +3,9 @@ The goals of the Business Analyst are to derive helpful business insights from t
 The Telco operational database is spread over tens of tables in a *third normal form* (1) data model. The Business Analyst needs to assess all the data fields that might be influential in the observed patterns of contract cancellation and bring them together in a Db2 table or view for SQL Data Insights to work on.
 { .annotate }
 
-1.   Third normal form is a database schema design approach for relational databases which uses normalizing principles to reduce the duplication of data, avoid data anomalies, ensure referential integrity, and simplify data management. It was defined in 1971 by Edgar F. Codd, an English computer scientist who invented the relational model for database management. -,<a href="https://en.wikipedia.org/wiki/Third_normal_form" target="_blank">Wikipedia</a>
+1.   Third normal form is a database schema design approach for relational databases which uses normalizing principles to reduce the duplication of data, avoid data anomalies, ensure referential integrity, and simplify data management. It was defined in 1971 by Edgar F. Codd, an English computer scientist who invented the relational model for database management. -<a href="https://en.wikipedia.org/wiki/Third_normal_form" target="_blank">Wikipedia</a>
 
-The starting point for this process is that the Business Analyst has performed the review of relevant data, produced a table containing all the customers and the characteristics of their contracts with the company, and whether or not they are still an active customer (**CHURN=No**) or not (**CHURN=Yes**).
+The starting point for this process is that the Business Analyst has performed the review of relevant data, produced a table containing all the customers and the characteristics of their contracts with the company, and whether are still an active customer (**CHURN=No**) or not (**CHURN=Yes**).
 
 !!! important "Scroll down in the Jupyter Notebook"
 
@@ -15,4 +15,4 @@ The starting point for this process is that the Business Analyst has performed t
 
     ![](_attachments/baChurn1.jpg)
     
-Review the data returned.
+Review the sample of data returned.
