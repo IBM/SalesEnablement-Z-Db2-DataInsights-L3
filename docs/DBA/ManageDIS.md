@@ -1,6 +1,6 @@
 Follow the directions below to manage the SQL Data Insights service.
 
-- In the virtual environment, open the **Google Chrome** **(A)** browser and enter the URL **B** for the SQL Data Insights web interface:
+- In the virtual environment, open the **Google Chrome** **(A)** browser and enter the URL **(B)** for the SQL Data Insights web interface:
 
     ```
     https://wg31.washington.ibm.com:15001/
@@ -8,7 +8,7 @@ Follow the directions below to manage the SQL Data Insights service.
     
     ![](_attachments/googleOpen.jpg)
 
-- If you see the message below click **Advanced** **(A)** and then clink on the **Proceed** link **(B)** to open the  unencrypted connection.
+- If you see a "**Your connection is not private**" message, click **Advanced** **(A)** and then clink the **Proceed** link **(B)** to open the unencrypted connection.
 
      ![](_attachments/googleException.jpg)
 
@@ -30,11 +30,11 @@ Follow the directions below to manage the SQL Data Insights service.
 
       ![](_attachments/sqldiConsoleSignin.jpg)
 
-- SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with **SSID=DBDG** and **LocationName=DALLASD**. Click the ellipses (![](_attachments/ellipses.png)) at the right-hand side of the DBDG connection (A), and select Connect (B) from the dropdown menu.
+- SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with **SSID=DBDG** and **LocationName=DALLASD**. Click the ellipses (![](_attachments/ellipses.png)) at the right-hand side of the DBDG connection **(A)**, and click Connect **(B)** from the dropdown menu.
 
      ![](_attachments/sqldiConnect.jpg)
 
-- Use the same Resource Access Control Facility (RACF) credentials as before to connect to the DBDG subsystem. The user ID is **(A)**:
+- Use the same Resource Access Control Facility (RACF) credentials as before to connect to the DBDG subsystem. Enter the user ID **(A)**:
   
     ```
     IBMUSER
@@ -46,7 +46,7 @@ Follow the directions below to manage the SQL Data Insights service.
      SYS1
      ```
      
-     and then click **Connect** button **(C)**.
+     and then click **Connect** **(C)**.
 
      ![](_attachments/sqldiLogin.jpg)
 
@@ -64,7 +64,7 @@ In this demonstration you will be using 3 Db2 tables.
 
 :   A view of the PENGUINS table that excludes the answer (the species).
 
-!!! note "About the penguins dataset"
+!!! info "About the penguins dataset"
 
     The penguins dataset is well covered in a number of data science websites, including <a href="https://www.kaggle.com/code/parulpandey/penguin-dataset-the-new-iris" target="_blank">Palmer Archipelago (Antarctica) penguin data</a>.
 
