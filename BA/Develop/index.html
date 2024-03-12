@@ -633,7 +633,55 @@
 
   <h1>Develop SQL queries to address these requirements</h1>
 
-<p>To be written....</p>
+<div><p>The Database Administrator has already trained the SQL Data Insights model for the <strong>DSNAIDB.CHURN</strong> table. Now, as the Business Analyst, use SQL Data Insights to analyze the data.</p>
+<ul>
+<li>
+<p>Open SQL Data Insights again from the <strong>Chrome browser</strong> <strong>(A)</strong> and go back to the <strong>AI objects</strong> list by clicking on the <strong>AI objects</strong> hyperlink <strong>(B)</strong>. </p>
+<p><img alt="" src="../_attachments/baSQLDI.jpg"></p>
+</li>
+<li>
+<p>Click the <strong>ellipses</strong> (<img alt="" src="../../DBA/_attachments/ellipses.png">) next to the <strong>CHURN</strong> table <strong>(C)</strong> and click <strong>Analyze data</strong>.</p>
+<p><img alt="" src="../_attachments/baChurn2.jpg"></p>
+</li>
+</ul>
+<p>Review the <strong>Analyze Data</strong> reports for the <strong>DSNAIDB.CHURN</strong> table.</p>
+<ul>
+<li>
+<p>Click on the <strong>Column discriminator</strong> tab (A).</p>
+<p><img alt="" src="../_attachments/baChurnDiscriminator.jpg"></p>
+</li>
+</ul>
+<p>The <strong>column discriminator</strong> report is very helpful in identifying the features in the <strong>CHURN</strong> dataset that are most significant in determining <em>similarity</em> or <em>dissimilarity</em> between records.</p>
+<p>Pay particular attention to the <strong>Column discriminator scores</strong> for each of the columns in the SQL Data Insights model. <em>The chart shows the relative importance of each column in semantically distinguishing a customer record from other records.</em> It shows that the following four columns are the most influential.
+- <strong>TOTALCHARGES</strong></p>
+<ul>
+<li>
+<p><strong>PAYMENTMETHOD</strong></p>
+</li>
+<li>
+<p><strong>MONTHLYCHARGES</strong></p>
+</li>
+<li>
+<p><strong>TENURE</strong></p>
+</li>
+</ul>
+<p><strong>Customer 3668-QPYBK</strong> has churned. If there are reasons to believe that this customer is representative of the pattern of account cancellations, then you can find the most similar customers based on the <em>similarity score</em> from SQL Data Insights.</p>
+<ul>
+<li>Return to the Jupyter Notebook in VS Code.</li>
+<li>
+<p>Run the <strong>SQL query</strong> to find <strong>Customer 3668-QPYBK</strong> <strong>(A)</strong>.</p>
+<p><img alt="" src="../_attachments/baChurnCustomer3668-QPYBK.jpg"></p>
+</li>
+</ul>
+<p>With SQL Data Insights it is easy to find out which customers are most similar to the customer (or cluster of customers) who have churned.</p>
+<ul>
+<li>
+<p>Run the <strong>SQL query</strong> to find customers similar to <strong>Customer 3668-QPYBK</strong> <strong>(A)</strong> based upon the most influential columns mentioned earlier (TOTALCHARGES, PAYMENTMETHOD, MONTHLYCHARGES, and TENURE).</p>
+<p><img alt="" src="../_attachments/baSimilarTo3668-QPYBK.jpg"></p>
+</li>
+</ul>
+<p>A business analyst would want to construct several queries with SQL data insights to explore the data and discover common factors which are most associated with customer churn, or customer fraud, propensity to take out additional services, or the like.</p>
+<p>SQL Data Insights provides an environment to exploit the power of AI with absolutely no data science expertise or data science research department. It is by no means a replacement for the power of trained supervised models, but it can serve as a valuable tool for business analysts to use AI in their roles, or to assist data scientists in their endeavors.</p></div>
 
 
 
