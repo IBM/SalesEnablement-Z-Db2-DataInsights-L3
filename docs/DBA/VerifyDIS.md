@@ -18,7 +18,7 @@ The Windows image of this demonstration has been pre-installed with Anaconda, Py
 
 Once the Notebook renders in VS, you may want to adjust the settings as follows.
 
-- Use ++Ctrl+-++ or ++Ctrl++++ to adjust the font size of all panels in the display.
+- Use ++ctrl+minus++ or ++Ctrl+plus++ to adjust the font size of all panels in the display.
 
 <div class="annotate" markdown>
 - Verify the Python kernel **cw01** loaded **(A)** (1). If needed (or if prompted), click **Restart** **(B)** to restart the kernel (2).
