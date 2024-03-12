@@ -6,5 +6,5 @@ Follow these steps to when your reservation is ready.
 
 - Select the **Access details** tab **(A)**. Take note of the **User for web access point** and **Password** provided on this tab **(B)**. Then click the link on the **Web access point** box **(C)**. The **IBM Z Trail** login window opens. Enter the **User for web access point** and **Password** (from the previous screen) into the **Username** and **Password** fields **(D)** and click **Sign in** **(E)**.
 
-   ![](_attachments/zVASignIn.jpg)
+    ![](_attachments/zVASignIn.jpg)
 
