@@ -33,7 +33,7 @@ Next, run each step of the Jupyter notebook to connect to the data base and exec
 
 !!! tip "To run a Jupyter notebook step"
 
-    To run the instructions in a cell, you highlight the cell (a blue line will appear to the left of the cell) and click the **arrow** **(A)** to invoke the code in that cell or use the keyboard shortcut: ++Ctrl+Alt+Enter++.
+    To run the instructions in a cell, you highlight the cell (a blue line will appear to the left of the cell) and click the **arrow** **(A)** to invoke the code in that cell or use the keyboard shortcut: ++ctrl+alt+enter++.
 
     ![](_attachments/vsRunACell.jpg)
 
@@ -60,13 +60,13 @@ Now you are ready to run SQL queries against the Db2 instance. Start with a simp
 
 The Penguin dataset represents a data science classification challenge. Based on several observations, is it possible to accurately predict what species any penguin is? The output shown above contains the answer.
 
-To validate the ability of SQL Data Insights to find similarities and differences between records, you need to create a view that excludes the answers. Thus, why the EXPLORE.PENGUINS_UNC view created and trained in the previous steps.
+To validate the ability of SQL Data Insights to find similarities and differences between records, you need to create a view that excludes the answers. Thus, why the **EXPLORE.PENGUINS_UNC** view was created and trained in the previous steps.
 
 - Run the **SQL select** against the **explore.penguins_unc** view **(A)**.
 
     ![](_attachments/vsSelectP-UNC.jpg)
 
-Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the PENGUINS_UNC table that has an associated trained model.
+Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the **PENGUINS_UNC** table that has an associated trained model.
 
 - Run the **AI_SIMILARITY SQL **select** against the **explore.penguins_unc** view **(A)**.
 
@@ -97,7 +97,7 @@ You can write SQL queries to select:
 - Run the SQL query to select the average similarity of Penguin #11 to all other Adelie penguins **(A)** (1).
 
     ![](_attachments/vsSQL-11-Adelie.jpg)
-<div>
+</div>
 1. SQL query
    ```%sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 1 and 152 ) select AVG(similarity) from V1 ;```
 
