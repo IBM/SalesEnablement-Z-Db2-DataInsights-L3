@@ -8,7 +8,7 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
 ## Start the SQL Data Insights Service
 
-- Open the **Putty terminal**, bu clicking on teh proper desktop icon **(A)**.
+- Open the **Putty terminal**, by clicking on the proper desktop icon **(A)**.
 
     ![](_attachments/desktop.jpg) ![](_attachments/puttyIcon.jpg)
 
@@ -16,12 +16,12 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
     ![](_attachments/puttySession.jpg)
 
-- Login with user **(A)**
+- Login with user **(A)**:
   
     ```
     IBMUSER
     ```
-    and password **(B)**
+    and password **(B)**:
 
     ```
     SYS1
@@ -29,7 +29,9 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
     ![](_attachments/puttyLogin.jpg)
 
-- Switch user to **AIDBADM** using the **su** command **(A)**:
+- Switch user to **AIDBADM** (1) using the **su** command **(A)**: 
+{ .annotate }
+1. :**AIDBADM** is the instance owner of the SQL Data Insights instance.
 
      ```
      su - adibadm
