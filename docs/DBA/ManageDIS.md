@@ -84,10 +84,11 @@ The list of AI-enabled objects is displayed. This is the administration web page
 
     ![](_attachments/sqldiExploreBy.jpg)
 
-<div class="annotate" markdown>    
+<div class="annotate" markdown> 
+
 - From the generated list, select the **PENGUINS_UNC** table **(A)** (1) and then click **Enable AI query** **(B)**.
  
-   ![](_attachments/sqldiEnableAIQuery.jpg)
+    ![](_attachments/sqldiEnableAIQuery.jpg)
 
 </div>
 
