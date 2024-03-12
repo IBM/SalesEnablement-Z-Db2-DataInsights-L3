@@ -31,8 +31,6 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
 <div class="annotate" markdown>
 - Switch user to **AIDBADM** (1) using the **su** command **(A)**:
-</div>
-1.  :**AIDBADM** is the instance owner of the SQL Data Insights instance.
 
      ```
      su - adibadm
@@ -45,6 +43,8 @@ This is to help indicate that you need to type or copy/paste all of the text. No
      ```
 
      ![](_attachments/suCMD.jpg)
+</div>
+1.  :**AIDBADM** is the instance owner of the SQL Data Insights instance.
 
 - Stat the SQL Data Insights instance using the command below **(A)**:
      
