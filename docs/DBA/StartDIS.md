@@ -6,7 +6,7 @@ Sample text to enter.
 
 This is to help indicate that you need to type or copy/paste all of the text. Notice the **Copy to clipboard** button (![](_attachments/copyToClipboard.png)). Use it to copy the text and then use your system's paste option (++cmd+v++ or ++ctrl+v++) to enter the text.
 
-## Start the SQL Data Insights Service
+Follow the directions below to start the SQL Data Insights service.
 
 - Open the **Putty terminal**, by clicking on the proper desktop icon **(A)**.
 
@@ -44,7 +44,7 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
      ![](_attachments/suCMD.jpg)
 </div>
-1.  :**AIDBADM** is the instance owner of the SQL Data Insights instance.
+1.  **AIDBADM** is the instance owner of the SQL Data Insights instance.
 
 - Stat the SQL Data Insights instance using the command below **(A)**:
      
