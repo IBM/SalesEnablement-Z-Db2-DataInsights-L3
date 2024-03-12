@@ -662,9 +662,11 @@
 </li>
 <li>
 <p>Use the same Resource Access Control Facility (RACF) credentials as before to connect to the DBDG subsystem. The user ID is <strong>(A)</strong>:</p>
-<p><code>IBMUSER</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>IBMUSER
+</code></pre></div>
 <p>and password <strong>(B)</strong>:</p>
-<p><code>SYS1</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>SYS1
+</code></pre></div>
 <p>and then click <strong>Connect</strong> button <strong>(C)</strong>.</p>
 <p><img alt="" src="../_attachments/sqldiLogin.jpg"></p>
 </li>
@@ -695,7 +697,82 @@
 </li>
 </ul>
 <p>The list of AI-enabled objects is displayed. This is the administration web page where you can work with AI-enabled objects and select new objects to train.</p>
-<p><img alt="" src="../_attachments/sqldiAllAIObjects.jpg"></p></div>
+<p><img alt="" src="../_attachments/sqldiAllAIObjects.jpg"></p>
+<ul>
+<li>
+<p>Click the <strong>Add object</strong> <strong>(A)</strong> to invoke the dialog to train a new Db2 table or view.</p>
+<p><img alt="" src="../_attachments/sqldiAddObject.jpg"></p>
+</li>
+<li>
+<p>Select the <strong>EXPLORE</strong> schema to filter by <strong>(B)</strong> and click the magnifying glass icon (<img alt="" src="../_attachments/magnifyingGlass.png">) (C) to list the objects in that schema.</p>
+<p><img alt="" src="../_attachments/sqldiExploreBy.jpg"></p>
+</li>
+</ul>
+<div class="annotate">
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li>From the generated list, select the <strong>PENGUINS_UNC</strong> table <strong>(A)</strong> and then click <strong>Enable AI query</strong> <strong>(B)</strong>.</li>
+</ul>
+<p><img alt="" src="../_attachments/sqldiEnableAIQuery.jpg"></p>
+</div>
+<ol>
+<li>This is a table with measurements of various penguins in a scientific study in Antarctica, without the species classification field (penguins unclassified). It would be cheating to include the classification field, because you want to assess how well SQL Data Insights can address the classification challenge without any formal data science expertise, and without using the answer.</li>
+</ol>
+<ul>
+<li>
+<p>Review each of the fields in the table. First, checkmark all column names <strong>(A)</strong>. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. You will also want to tell SQL Data Insights that the <strong>ID</strong> field is a key value (change it to <strong>Key</strong>) <strong>(B)</strong>. Then click <strong>Next</strong> <strong>(C)</strong>.</p>
+<p><img alt="" src="../_attachments/sqldiSelectColumns.jpg"></p>
+</li>
+<li>
+<p>Optionally, you can tell SQL Data Insights what values to treat as NULL values and exclude from the model training process. The penguins’ data has very few null values, so you will skip this step and click the <strong>Enable</strong> <strong>(A)</strong>.</p>
+<p><img alt="" src="../_attachments/sqldiEnableAIQuery2.jpg"></p>
+</li>
+</ul>
+<p>The SQL Data Insights user interface will return to the <strong>AI objects</strong> panel and show that the <strong>PENGUINS_UNC</strong> table is in the process of being trained.</p>
+<div class="highlight"><pre><span></span><code>![](_attachments/sqldbTraningInProgress.jpg)
+</code></pre></div>
+<p>SQL Data Insights is designed to be simple to use and there is tooling available to monitor its progress. The model training process uses an embedded Spark cluster to train the model. The Spark cluster provides a browser dashboard to monitor the status of Spark nodes, training jobs in progress, and completed training jobs. Training jobs are displayed with hyperlinks to access execution logs if needed.</p>
+<ul>
+<li>
+<p>Open a new tab in the Google Chrome browser and enter the following URL <strong>(A)</strong> to open the <strong>Spark dashboard</strong>: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>http://wg31.washington.ibm.com:8080
+</code></pre></div>
+<p><img alt="" src="../_attachments/openSparkdashboard.jpg"></p>
+</li>
+<li>
+<p>Return to the SQL Data Insights tab, and verify the table is now <strong>Enabled</strong>. You may need to refresh <strong>(A)</strong> the web page.</p>
+<p><img alt="" src="../_attachments/sqldiRefreshBrowser.jpg"></p>
+</li>
+<li>
+<p>Review the summary details of the trained models. Click the ellipses (<img alt="" src="../_attachments/ellipses.png">) next to the <strong>PENGUINS_UNC</strong> table <strong>(A)</strong> and click <strong>Analyze data</strong> <strong>(B)</strong>.</p>
+<p><img alt="" src="../_attachments/sqldiSummaryDetails.jpg">
+<img alt="" src="../_attachments/sqldiSummaryDetailAnalyze.jpg"></p>
+</li>
+</ul>
+<p>Check the four tabs to review the model details, by clicking on the tabs’ names.</p>
+<dl>
+<dt><code>Object details</code></dt>
+<dd>
+<p>The <strong>Object details</strong> report <strong>(A)</strong> provides information about the features in the dataset.</p>
+<p><img alt="" src="../_attachments/sqldiObjectDetails.jpg"></p>
+</dd>
+<dt><code>Data statistics</code></dt>
+<dd>
+<p>The <strong>Data statistics</strong> report <strong>(A)</strong> is a collection of statistical analysis values of the data.</p>
+<p><img alt="" src="../_attachments/sqldiDataStatistics.jpg"></p>
+</dd>
+<dt><code>Column influence</code></dt>
+<dd>
+<p>The <strong>Column influence</strong> report <strong>(A)</strong> shows which features in the dataset were completed. Some of the penguins were not weighed or sexed.</p>
+<p><img alt="" src="../_attachments/sqldiColumnInfluence.jpg"></p>
+</dd>
+<dt><code>Colukmn discriminator</code></dt>
+<dd>
+<p>The <strong>Column discriminator</strong> report <strong>(A)</strong> is derived from the neural network model that has been built and shows how significant the values of a column are in semantically distinguishing between different records.</p>
+<p><img alt="" src="../_attachments/sqldiColumnDiscriminator.jpg"></p>
+</dd>
+</dl></div>
 
 
 
