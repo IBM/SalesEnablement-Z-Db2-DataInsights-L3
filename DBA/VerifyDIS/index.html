@@ -652,7 +652,7 @@
 </ul>
 <p>Once the Notebook renders in VS, you may want to adjust the settings as follows.</p>
 <ul>
-<li>Use <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span> or ++Ctrl+plus++ to adjust the font size of all panels in the display.</li>
+<li>Use <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span> to adjust the font size of all panels in the display.</li>
 </ul>
 <div class="annotate">
 <ul>
@@ -735,13 +735,46 @@
 <li>
 <p>Run the SQL query to select the average similarity of Penguin #11 to all other Adelie penguins <strong>(A)</strong> (1).</p>
 <p><img alt="" src="../_attachments/vsSQL-11-Adelie.jpg"></p>
+<p>The result (which may vary slightly when you train the model) shows a value <em>like</em> this:</p>
+<p><img alt="" src="../_attachments/vsSQL-11-AdelieResult.jpg"></p>
 </li>
 </ul>
 </div>
 <ol>
 <li>SQL query
    <code>%sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 1 and 152 ) select AVG(similarity) from V1 ;</code></li>
-</ol></div>
+</ol>
+<div class="annotate">
+<ul>
+<li>
+<p>Run the SQL query to select the average similarity of Penguin #11 to all all Gentoo penguins <strong>(A)</strong> (1).</p>
+<p><img alt="" src="../_attachments/vsSQL-11-Gentoo.jpg"></p>
+<p>The result shows a value <em>like</em> this:</p>
+<p><img alt="" src="../_attachments/vsSQL-11-GentooResult.jpg"></p>
+</li>
+</ul>
+</div>
+<ol>
+<li>SQL query
+   <code>.sql %sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 153 and 276 ) select AVG(similarity) from V1 ;</code></li>
+</ol>
+<div class="annotate" markdown="block">
+- Run the SQL query to select the average similarity of Penguin #11 to all all Chinstrap penguins **(A)** (1).
+
+    ![](_attachments/vsSQL-11-Chinstrap.jpg)
+
+    The result shows a value *like* this:
+
+    ![](_attachments/vsSQL-11-ChinstrapResult.jpg)
+
+</div>
+<ol>
+<li>SQL query
+   <code>.sql %sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 277 and 344 ) select AVG(similarity) from V1 ;</code></li>
+</ol>
+<p>The first query shows a similarity much higher than the others two queries. There are some additional queries that you can run in the Jupyter notebook for additional information and testing.</p>
+<p>Pause and reflect on what SQL Data Insights has just done. With absolutely zero data science skills and zero knowledge of the anatomy of penguins, SQL Data Insights can clearly differentiate between the species of penguin. It does this purely based on values, with no contextual reference frame in a Db2 table.</p>
+<p>If SQL Data Insights can classify records from a classical data science dataset, then it can do the same for business-oriented datasets!</p></div>
 
 
 
