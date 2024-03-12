@@ -29,8 +29,7 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
     ![](_attachments/puttyLogin.jpg)
 
-- Switch user to **AIDBADM** (1) using the **su** command **(A)**: { .annotate }
-1.  :**AIDBADM** is the instance owner of the SQL Data Insights instance.
+- Switch user to **AIDBADM** (1) using the **su** command **(A)**: { .annotate } 1.  :**AIDBADM** is the instance owner of the SQL Data Insights instance.
 
      ```
      su - adibadm
