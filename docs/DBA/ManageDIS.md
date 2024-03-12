@@ -76,34 +76,34 @@ The list of AI-enabled objects is displayed. This is the administration web page
 
 ![](_attachments/sqldiAllAIObjects.jpg)
 
-- Click the **Add object** **(A)** to invoke the dialog to train a new Db2 table or view.
+- Click **Add object** **(A)** to invoke the dialog to train a new Db2 table or view.
 
     ![](_attachments/sqldiAddObject.jpg)
 
-- Select the **EXPLORE** schema to filter by **(B)** and click the magnifying glass icon (![](_attachments/magnifyingGlass.png)) (C) to list the objects in that schema.
+- Select the **EXPLORE** schema to filter by **(B)** and click the magnifying glass icon (![](_attachments/magnifyingGlass.png)) **(C)** to list the objects in that schema.
 
     ![](_attachments/sqldiExploreBy.jpg)
 
 <div class="annotate" markdown>    
-- From the generated list, select the **PENGUINS_UNC** table **(A)** and then click **Enable AI query** **(B)**.
+- From the generated list, select the **PENGUINS_UNC** table **(A)** (1) and then click **Enable AI query** **(B)**.
  
    ![](_attachments/sqldiEnableAIQuery.jpg)
 
 </div>
 
-1. This is a table with measurements of various penguins in a scientific study in Antarctica, without the species classification field (penguins unclassified). It would be cheating to include the classification field, because you want to assess how well SQL Data Insights can address the classification challenge without any formal data science expertise, and without using the answer.
+1.  This is a table with measurements of various penguins in a scientific study in Antarctica, without the species classification field (penguins unclassified). It would be cheating to include the classification field, because you want to assess how well SQL Data Insights can address the classification challenge without any formal data science expertise, and without using the answer.
 
-- Review each of the fields in the table. First, checkmark all column names **(A)**. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. You will also want to tell SQL Data Insights that the **ID** field is a key value (change it to **Key**) **(B)**. Then click **Next** **(C)**.
+- Review each of the fields in the table. First, checkmark all **column names** **(A)**. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. Change the **ID** field to the **Key** data type **(B)**. Click **Next** **(C)**.
 
     ![](_attachments/sqldiSelectColumns.jpg)
 
-- Optionally, you can tell SQL Data Insights what values to treat as NULL values and exclude from the model training process. The penguins’ data has very few null values, so you will skip this step and click the **Enable** **(A)**.
+- Optionally, you can tell SQL Data Insights what values to treat as NULL values and exclude from the model training process. The penguins’ data has very few null values, so you will skip this step and click **Enable** **(A)**.
 
     ![](_attachments/sqldiEnableAIQuery2.jpg)
 
-The SQL Data Insights user interface will return to the **AI objects** panel and show that the **PENGUINS_UNC** table is in the process of being trained.
+The SQL Data Insights user interface will return to the **AI objects** panel. The **PENGUINS_UNC** table shows a status of **Training**.
 
-    ![](_attachments/sqldbTraningInProgress.jpg)
+![](_attachments/sqldbTraningInProgress.jpg)
 
 SQL Data Insights is designed to be simple to use and there is tooling available to monitor its progress. The model training process uses an embedded Spark cluster to train the model. The Spark cluster provides a browser dashboard to monitor the status of Spark nodes, training jobs in progress, and completed training jobs. Training jobs are displayed with hyperlinks to access execution logs if needed.
 
@@ -115,7 +115,7 @@ SQL Data Insights is designed to be simple to use and there is tooling available
 
     ![](_attachments/openSparkdashboard.jpg)
 
-- Return to the SQL Data Insights tab, and verify the table is now **Enabled**. You may need to refresh **(A)** the web page.
+- Return to the SQL Data Insights tab and verify the table is now **Enabled**. You may need to refresh **(A)** the web page.
 
     ![](_attachments/sqldiRefreshBrowser.jpg)
 
@@ -124,7 +124,7 @@ SQL Data Insights is designed to be simple to use and there is tooling available
     ![](_attachments/sqldiSummaryDetails.jpg)
     ![](_attachments/sqldiSummaryDetailAnalyze.jpg)
 
-Check the four tabs to review the model details, by clicking on the tabs’ names.
+Click each of the four **tabs** to review the model details.
 
 `Object details`
 
