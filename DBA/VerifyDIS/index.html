@@ -709,7 +709,7 @@
 <p>Now, perform an SQL query to test that one of the SQL Data Insights built in functions can be invoked successfully against the <strong>PENGUINS_UNC</strong> table that has an associated trained model.</p>
 <ul>
 <li>
-<p>Run the <strong>AI_SIMILARITY SQL </strong>select<strong> against the </strong>explore.penguins_unc<strong> view </strong>(A)**.</p>
+<p>Run the <strong>AI_SIMILARITY SQL select</strong> against the <strong>explore.penguins_unc</strong> view <strong>(A)</strong>.</p>
 <p><img alt="" src="../_attachments/vsAISimilaritySQL.jpg"></p>
 </li>
 </ul>
@@ -722,9 +722,9 @@
 <p>It would be good to perform some sort of accuracy check to check whether SQL Data Insights has done a good job of discovering the patterns in the penguin data measurements. You have the means to do that because you have the original dataset that included the species as determined by the Antarctic scientists who took all the measurements of the penguins in the first place.</p>
 <p>Penguin #11 was determined to be an Adelie Penguin.</p>
 <ul>
-<li>Penguins with IDs from 1 to 152 were Adelie Penguins.</li>
-<li>Penguins with IDs from 153 to 276 were Gentoo Penguins.</li>
-<li>Penguins with IDs from 277 to 344 were Chinstrap Penguins.</li>
+<li>Penguins with IDs from 1 to 152 are Adelie Penguins.</li>
+<li>Penguins with IDs from 153 to 276 are Gentoo Penguins.</li>
+<li>Penguins with IDs from 277 to 344 are Chinstrap Penguins.</li>
 </ul>
 <p>You can write SQL queries to select:
 - the average similarity of Penguin #11 to all other Adelie penguins
@@ -733,7 +733,7 @@
 <div class="annotate">
 <ul>
 <li>
-<p>Run the SQL query to select the average similarity of Penguin #11 to all other Adelie penguins <strong>(A)</strong> (1).</p>
+<p>Run the <strong>SQL query</strong> to select the <strong>average similarity</strong> of Penguin #11 to all other Adelie penguins <strong>(A)</strong> (1).</p>
 <p><img alt="" src="../_attachments/vsSQL-11-Adelie.jpg"></p>
 <p>The result (which may vary slightly when you train the model) shows a value <em>like</em> this:</p>
 <p><img alt="" src="../_attachments/vsSQL-11-AdelieResult.jpg"></p>
@@ -747,7 +747,7 @@
 <div class="annotate">
 <ul>
 <li>
-<p>Run the SQL query to select the average similarity of Penguin #11 to all all Gentoo penguins <strong>(A)</strong> (1).</p>
+<p>Run the <strong>SQL query</strong> to select the <strong>average similarity</strong> of Penguin #11 to all all Gentoo penguins <strong>(A)</strong> (1).</p>
 <p><img alt="" src="../_attachments/vsSQL-11-Gentoo.jpg"></p>
 <p>The result shows a value <em>like</em> this:</p>
 <p><img alt="" src="../_attachments/vsSQL-11-GentooResult.jpg"></p>
@@ -758,15 +758,15 @@
 <li>SQL query
    <code>.sql %sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 153 and 276 ) select AVG(similarity) from V1 ;</code></li>
 </ol>
-<div class="annotate" markdown="block">
-- Run the SQL query to select the average similarity of Penguin #11 to all all Chinstrap penguins **(A)** (1).
-
-    ![](_attachments/vsSQL-11-Chinstrap.jpg)
-
-    The result shows a value *like* this:
-
-    ![](_attachments/vsSQL-11-ChinstrapResult.jpg)
-
+<div class="annotate">
+<ul>
+<li>
+<p>Run the <strong>SQL query</strong> to select the <strong>average similarity</strong> of Penguin #11 to all all Chinstrap penguins <strong>(A)</strong> (1).</p>
+<p><img alt="" src="../_attachments/vsSQL-11-Chinstrap.jpg"></p>
+<p>The result shows a value <em>like</em> this:</p>
+<p><img alt="" src="../_attachments/vsSQL-11-ChinstrapResult.jpg"></p>
+</li>
+</ul>
 </div>
 <ol>
 <li>SQL query
