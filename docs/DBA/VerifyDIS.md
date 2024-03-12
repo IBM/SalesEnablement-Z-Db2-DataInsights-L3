@@ -18,7 +18,7 @@ The Windows image of this demonstration has been pre-installed with Anaconda, Py
 
 Once the Notebook renders in VS, you may want to adjust the settings as follows.
 
-- Use ++ctrl+minus++ or ++Ctrl+plus++ to adjust the font size of all panels in the display.
+- Use ++ctrl+minus++ or ++ctrl+plus++ to adjust the font size of all panels in the display.
 
 <div class="annotate" markdown>
 - Verify the Python kernel **cw01** loaded **(A)** (1). If needed (or if prompted), click **Restart** **(B)** to restart the kernel (2).
@@ -97,7 +97,43 @@ You can write SQL queries to select:
 - Run the SQL query to select the average similarity of Penguin #11 to all other Adelie penguins **(A)** (1).
 
     ![](_attachments/vsSQL-11-Adelie.jpg)
+
+    The result (which may vary slightly when you train the model) shows a value *like* this:
+
+    ![](_attachments/vsSQL-11-AdelieResult.jpg)
+
 </div>
 1. SQL query
    ```%sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 1 and 152 ) select AVG(similarity) from V1 ;```
 
+<div class="annotate" markdown>
+- Run the SQL query to select the average similarity of Penguin #11 to all all Gentoo penguins **(A)** (1).
+
+    ![](_attachments/vsSQL-11-Gentoo.jpg)
+
+    The result shows a value *like* this:
+
+    ![](_attachments/vsSQL-11-GentooResult.jpg)
+
+</div>
+1. SQL query
+   ```.sql %sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 153 and 276 ) select AVG(similarity) from V1 ;```
+
+   <div class="annotate" markdown>
+- Run the SQL query to select the average similarity of Penguin #11 to all all Chinstrap penguins **(A)** (1).
+
+    ![](_attachments/vsSQL-11-Chinstrap.jpg)
+
+    The result shows a value *like* this:
+
+    ![](_attachments/vsSQL-11-ChinstrapResult.jpg)
+
+</div>
+1. SQL query
+   ```.sql %sql with V1 as (SELECT U.*, decimal(AI_SIMILARITY(ID,11),5,2) AS SIMILARITY FROM EXPLORE.PENGUINS_UNC U WHERE U.ID between 277 and 344 ) select AVG(similarity) from V1 ;```
+
+The first query shows a similarity much higher than the others two queries. There are some additional queries that you can run in the Jupyter notebook for additional information and testing.
+
+Pause and reflect on what SQL Data Insights has just done. With absolutely zero data science skills and zero knowledge of the anatomy of penguins, SQL Data Insights can clearly differentiate between the species of penguin. It does this purely based on values, with no contextual reference frame in a Db2 table.
+
+If SQL Data Insights can classify records from a classical data science dataset, then it can do the same for business-oriented datasets!
