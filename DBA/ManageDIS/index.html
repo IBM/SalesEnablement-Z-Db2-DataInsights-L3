@@ -633,7 +633,69 @@
 
   <h1>Manage the SQL Data Insights Service</h1>
 
-<p>To be written....</p>
+<div><p>Follow the directions below to manage the SQL Data Insights service.</p>
+<ul>
+<li>
+<p>In the virtual environment, open the <strong>Google Chrome</strong> <strong>(A)</strong> browser and enter the URL <strong>B</strong> for the SQL Data Insights web interface:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://wg31.washington.ibm.com:15001/
+</code></pre></div>
+<p><img alt="" src="../_attachments/googleOpen.jpg"></p>
+</li>
+<li>
+<p>If you see the message below click <strong>Advanced</strong> <strong>(A)</strong> and then clink on the <strong>Proceed</strong> link <strong>(B)</strong> to open the  unencrypted connection.</p>
+<p><img alt="" src="../_attachments/googleException.jpg"></p>
+<p><img alt="" src="../_attachments/googleException2.jpg"></p>
+</li>
+<li>
+<p>Log into SQL Data Insights using user <strong>(A)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>IBMUSER
+</code></pre></div>
+<p>and password <strong>(B)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SYS1
+</code></pre></div>
+<p>and then click <strong>Sign in</strong> <strong>(C)</strong>.</p>
+<p><img alt="" src="../_attachments/sqldiConsoleSignin.jpg"></p>
+</li>
+<li>
+<p>SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with <strong>SSID=DBDG</strong> and <strong>LocationName=DALLASD</strong>. Click the ellipses (<img alt="" src="../_attachments/ellipses.png">) at the right-hand side of the DBDG connection (A), and select Connect (B) from the dropdown menu.</p>
+<p><img alt="" src="../_attachments/sqldiConnect.jpg"></p>
+</li>
+<li>
+<p>Use the same Resource Access Control Facility (RACF) credentials as before to connect to the DBDG subsystem. The user ID is <strong>(A)</strong>:</p>
+<p><code>IBMUSER</code></p>
+<p>and password <strong>(B)</strong>:</p>
+<p><code>SYS1</code></p>
+<p>and then click <strong>Connect</strong> button <strong>(C)</strong>.</p>
+<p><img alt="" src="../_attachments/sqldiLogin.jpg"></p>
+</li>
+</ul>
+<p>In this demonstration you will be using 3 Db2 tables.</p>
+<dl>
+<dt><code>DSNAIDB.CHURN</code></dt>
+<dd>
+<p>A dataset from a telecommunications company (telco) containing 7,043 customer records, of which 1,869 have cancelled their contracts (Churn = Yes).</p>
+</dd>
+<dt><code>EXPLORE.PENGUINS</code></dt>
+<dd>
+<p>A classic data science dataset which is used as a sample dataset for learning data science. The challenge is to use several penguin measurements (weight, height, length, location, etc) to build a classification model to determine what species they are.</p>
+</dd>
+<dt><code>EXPLORE.PENGUINS_UNC</code></dt>
+<dd>
+<p>A view of the PENGUINS table that excludes the answer (the species).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">About the penguins dataset</p>
+<p>The penguins dataset is well covered in a number of data science websites, including <a href="https://www.kaggle.com/code/parulpandey/penguin-dataset-the-new-iris" target="_blank">Palmer Archipelago (Antarctica) penguin data</a>.</p>
+</div>
+<ul>
+<li>
+<p>Display all the Db2 tables and views that have already been enabled for AI. Click the ellipses (<img alt="" src="../_attachments/ellipses.png">) <strong>(A)</strong> and then click <strong>List AI objects</strong> <strong>(B)</strong>.</p>
+<p><img alt="" src="../_attachments/sqldiListAIObjects.jpg"></p>
+</li>
+</ul>
+<p>The list of AI-enabled objects is displayed. This is the administration web page where you can work with AI-enabled objects and select new objects to train.</p>
+<p><img alt="" src="../_attachments/sqldiAllAIObjects.jpg"></p></div>
 
 
 
