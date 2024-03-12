@@ -16,7 +16,8 @@ Review the **Analyze Data** reports for the **DSNAIDB.CHURN** table.
 
 The **column discriminator** report is very helpful in identifying the features in the **CHURN** dataset that are most significant in determining *similarity* or *dissimilarity* between records.
 
-Pay particular attention to the **Column discriminator scores** for each of the columns in the SQL Data Insights model. *The chart shows the relative importance of each column in semantically distinguishing a customer record from other records.* It shows that the following four columns are the most influential.
+Pay particular attention to the **Column discriminator scores** for each of the columns in the SQL Data Insights model. *The chart shows the relative importance of each column in semantically distinguishing a customer record from other records.* It shows that the following four columns are the most influential:
+
 - **TOTALCHARGES**
 
 - **PAYMENTMETHOD**
@@ -38,6 +39,6 @@ With SQL Data Insights it is easy to find out which customers are most similar t
 
     ![](_attachments/baSimilarTo3668-QPYBK.jpg)
 
-A business analyst would want to construct several queries with SQL data insights to explore the data and discover common factors which are most associated with customer churn, or customer fraud, propensity to take out additional services, or the like.
+A business analyst could construct several queries with SQL data insights to explore the data and discover common factors which are most associated with specific customer events like customer churn, customer fraud, propensity to take out additional services, and the like.
 
 SQL Data Insights provides an environment to exploit the power of AI with absolutely no data science expertise or data science research department. It is by no means a replacement for the power of trained supervised models, but it can serve as a valuable tool for business analysts to use AI in their roles, or to assist data scientists in their endeavors.
