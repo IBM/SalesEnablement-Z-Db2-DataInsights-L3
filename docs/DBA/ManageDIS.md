@@ -36,11 +36,15 @@ Follow the directions below to manage the SQL Data Insights service.
 
 - Use the same Resource Access Control Facility (RACF) credentials as before to connect to the DBDG subsystem. The user ID is **(A)**:
   
-    ```IBMUSER```
+    ```
+    IBMUSER
+    ```
     
      and password **(B)**:
      
-     ```SYS1```
+     ```
+     SYS1
+     ```
      
      and then click **Connect** button **(C)**.
 
@@ -71,4 +75,78 @@ In this demonstration you will be using 3 Db2 tables.
 The list of AI-enabled objects is displayed. This is the administration web page where you can work with AI-enabled objects and select new objects to train.
 
 ![](_attachments/sqldiAllAIObjects.jpg)
+
+- Click the **Add object** **(A)** to invoke the dialog to train a new Db2 table or view.
+
+    ![](_attachments/sqldiAddObject.jpg)
+
+- Select the **EXPLORE** schema to filter by **(B)** and click the magnifying glass icon (![](_attachments/magnifyingGlass.png)) (C) to list the objects in that schema.
+
+    ![](_attachments/sqldiExploreBy.jpg)
+
+<div class="annotate" markdown>    
+- From the generated list, select the **PENGUINS_UNC** table **(A)** and then click **Enable AI query** **(B)**.
+ 
+   ![](_attachments/sqldiEnableAIQuery.jpg)
+
+</div>
+
+1. This is a table with measurements of various penguins in a scientific study in Antarctica, without the species classification field (penguins unclassified). It would be cheating to include the classification field, because you want to assess how well SQL Data Insights can address the classification challenge without any formal data science expertise, and without using the answer.
+
+- Review each of the fields in the table. First, checkmark all column names **(A)**. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. You will also want to tell SQL Data Insights that the **ID** field is a key value (change it to **Key**) **(B)**. Then click **Next** **(C)**.
+
+    ![](_attachments/sqldiSelectColumns.jpg)
+
+- Optionally, you can tell SQL Data Insights what values to treat as NULL values and exclude from the model training process. The penguins’ data has very few null values, so you will skip this step and click the **Enable** **(A)**.
+
+    ![](_attachments/sqldiEnableAIQuery2.jpg)
+
+The SQL Data Insights user interface will return to the **AI objects** panel and show that the **PENGUINS_UNC** table is in the process of being trained.
+
+    ![](_attachments/sqldbTraningInProgress.jpg)
+
+SQL Data Insights is designed to be simple to use and there is tooling available to monitor its progress. The model training process uses an embedded Spark cluster to train the model. The Spark cluster provides a browser dashboard to monitor the status of Spark nodes, training jobs in progress, and completed training jobs. Training jobs are displayed with hyperlinks to access execution logs if needed.
+
+- Open a new tab in the Google Chrome browser and enter the following URL **(A)** to open the **Spark dashboard**: 
+
+    ```
+    http://wg31.washington.ibm.com:8080
+    ```
+
+    ![](_attachments/openSparkdashboard.jpg)
+
+- Return to the SQL Data Insights tab, and verify the table is now **Enabled**. You may need to refresh **(A)** the web page.
+
+    ![](_attachments/sqldiRefreshBrowser.jpg)
+
+- Review the summary details of the trained models. Click the ellipses (![](_attachments/ellipses.png)) next to the **PENGUINS_UNC** table **(A)** and click **Analyze data** **(B)**.
+
+    ![](_attachments/sqldiSummaryDetails.jpg)
+    ![](_attachments/sqldiSummaryDetailAnalyze.jpg)
+
+Check the four tabs to review the model details, by clicking on the tabs’ names.
+
+`Object details`
+
+:   The **Object details** report **(A)** provides information about the features in the dataset.
+
+    ![](_attachments/sqldiObjectDetails.jpg)
+
+`Data statistics`
+
+:   The **Data statistics** report **(A)** is a collection of statistical analysis values of the data.
+
+    ![](_attachments/sqldiDataStatistics.jpg)
+
+`Column influence`
+
+:   The **Column influence** report **(A)** shows which features in the dataset were completed. Some of the penguins were not weighed or sexed.
+
+    ![](_attachments/sqldiColumnInfluence.jpg)
+
+`Colukmn discriminator`
+
+:   The **Column discriminator** report **(A)** is derived from the neural network model that has been built and shows how significant the values of a column are in semantically distinguishing between different records.
+
+    ![](_attachments/sqldiColumnDiscriminator.jpg)
 
