@@ -31,7 +31,7 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
 - Switch user to **AIDBADM** (1) using the **su** command **(A)**: 
 { .annotate }
-1. :**AIDBADM** is the instance owner of the SQL Data Insights instance.
+1.  :**AIDBADM** is the instance owner of the SQL Data Insights instance.
 
      ```
      su - adibadm
