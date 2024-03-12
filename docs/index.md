@@ -2,7 +2,7 @@
 
 ## Demonstration using IBM Virtual Development and Test for z/OS, Db2 for z/OS V13 with SQL Data Insights.
 
-*Gain more data insights with AI-Enabled query in Db2 for z/OS*
+### *Gain more data insights with AI-Enabled query in Db2 for z/OS*
 
 !!! Important "Prerequisites"
 
@@ -13,8 +13,6 @@
     - Artificial Intelligence (AI) concepts
     - Machine Learning and Deep Learning model concepts
   
-## Db2 for z/OS SQL Data Insights
-
 Artificial Intelligence (AI) has become an essential capability for enterprises to exploit and master. The data that is stored and managed in operational databases contains information that is invaluable to making informed decisions. Sometimes the insights can be extracted using conventional Structured Query Language (SQL) queries. But when the information clients seek is hidden in non-obvious patterns in the data, conventional SQL is not flexible enough to see those patterns.
 
 Db2 for z/OS SQL Data Insights is a transformational technology, that enables Deep Learning AI models to be trained against mainframe data, so that anybody who writes SQL queries can invoke standard SQL functions to understand the data patterns without any need for data science expertise. Db2 for z/OS SQL Data Insights is also called SQL Data Insights through this document.
@@ -24,7 +22,7 @@ The illustration below represents how Db2 for z/OS SQL Data Insights would be us
 - The Clients table holds information about the clients of a business.
 - The related model table is created when SQL Data Insights is instructed to Enable AI.
 - The example SQL query aims to find the top 20 clients who are most similar to the client with customer ID of 3668-QPYBK. The client in question may be of interest because of good or bad outcomes to be encouraged or avoided in other clients.
-- The first version of SQL Data Insights (DB2 13 FL500) provides 3 built-in functions: AI_SIMILARITY, AI_SEMANTIC_CLUSTER and AI_ANALOGY. All AI functions are based on the unsupervised neural network model that has been trained to find natural patterns in the data. In the case of the AI_SIMILARITY function, it computes a similarity score between any two records in an AI-enabled table.
+- The first version of SQL Data Insights (DB2 13 FL500) provides 3 built-in functions: ```AI_SIMILARITY```, ```AI_SEMANTIC_CLUSTER```, and ```AI_ANALOGY```. All AI functions are based on the unsupervised neural network model that has been trained to find natural patterns in the data. In the case of the ```AI_SIMILARITY``` function, it computes a similarity score between any two records in an AI-enabled table.
 - SQL queries can be submitted from anywhere with a SQL connection to Db2.
 
 ![](_attachments/AI%20at%20scale%20on%20IBM%20Z%20using%20Db2%20for%20zOS%20SQL%20Data%20Insights%20Workbook%20-%202024-Feb-26.jpg)
