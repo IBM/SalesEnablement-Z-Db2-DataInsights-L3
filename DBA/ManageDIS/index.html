@@ -642,7 +642,7 @@
 <p><img alt="" src="../_attachments/googleOpen.jpg"></p>
 </li>
 <li>
-<p>If you see a "<strong>Your connection is not private</strong>" message, click <strong>Advanced</strong> <strong>(A)</strong> and then clink the <strong>Proceed</strong> link <strong>(B)</strong> to open the unencrypted connection.</p>
+<p>If you see a "<strong>Your connection is not private</strong>" message, click <strong>Advanced</strong> <strong>(A)</strong> and then clink the <strong>Proceed to</strong> link <strong>(B)</strong> to open the unencrypted connection.</p>
 <p><img alt="" src="../_attachments/googleException.jpg"></p>
 <p><img alt="" src="../_attachments/googleException2.jpg"></p>
 </li>
@@ -657,7 +657,7 @@
 <p><img alt="" src="../_attachments/sqldiConsoleSignin.jpg"></p>
 </li>
 <li>
-<p>SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with <strong>SSID=DBDG</strong> and <strong>LocationName=DALLASD</strong>. Click the ellipses (<img alt="" src="../_attachments/ellipses.png">) at the right-hand side of the DBDG connection <strong>(A)</strong>, and click Connect <strong>(B)</strong> from the dropdown menu.</p>
+<p>SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with <strong>SSID=DBDG</strong> and <strong>LocationName=DALLASD</strong>. Click the <strong>ellipses</strong> (<img alt="" src="../_attachments/ellipses.png">) at the right-hand side of the DBDG connection <strong>(A)</strong>, and click <strong>Connect</strong> <strong>(B)</strong> from the dropdown menu.</p>
 <p><img alt="" src="../_attachments/sqldiConnect.jpg"></p>
 </li>
 <li>
@@ -704,7 +704,7 @@
 <p><img alt="" src="../_attachments/sqldiAddObject.jpg"></p>
 </li>
 <li>
-<p>Select the <strong>EXPLORE</strong> schema to filter by <strong>(B)</strong> and click the magnifying glass icon (<img alt="" src="../_attachments/magnifyingGlass.png">) <strong>(C)</strong> to list the objects in that schema.</p>
+<p>Click the <strong>Select schema</strong> pull-down menu, then select the <strong>EXPLORE</strong> schema to filter by <strong>(B)</strong>, and then click the magnifying glass icon (<img alt="" src="../_attachments/magnifyingGlass.png">) <strong>(C)</strong> to list the objects in that schema.</p>
 <p><img alt="" src="../_attachments/sqldiExploreBy.jpg"></p>
 </li>
 </ul>
@@ -721,12 +721,16 @@
 </ol>
 <ul>
 <li>
-<p>Review each of the fields in the table. First, checkmark all <strong>column names</strong> <strong>(A)</strong>. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. Change the <strong>ID</strong> field to the <strong>Key</strong> data type <strong>(B)</strong>. Click <strong>Next</strong> <strong>(C)</strong>.</p>
+<p>Review each of the fields in the table. First, checkmark all <strong>Column names</strong> <strong>(A)</strong>. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. Change data type of the <strong>ID</strong> column to <strong>Key</strong> <strong>(B)</strong>. Click <strong>Next</strong> <strong>(C)</strong>.</p>
 <p><img alt="" src="../_attachments/sqldiSelectColumns.jpg"></p>
 </li>
 <li>
 <p>Optionally, you can tell SQL Data Insights what values to treat as NULL values and exclude from the model training process. The penguins’ data has very few null values, so you will skip this step and click <strong>Enable</strong> <strong>(A)</strong>.</p>
 <p><img alt="" src="../_attachments/sqldiEnableAIQuery2.jpg"></p>
+</li>
+<li>
+<p>Click <strong>Enable</strong> <strong>(A)</strong> to confirm you want to train the model.</p>
+<p><img alt="" src="../_attachments/sqldiEnableConfirmation.jpg"></p>
 </li>
 </ul>
 <p>The SQL Data Insights user interface will return to the <strong>AI objects</strong> panel. The <strong>PENGUINS_UNC</strong> table shows a status of <strong>Training</strong>.</p>
