@@ -8,11 +8,11 @@ This is to help indicate that you need to type or copy/paste all of the text. No
 
 Follow the directions below to start the SQL Data Insights service.
 
-- Open the **Putty terminal**, by clicking on the proper desktop icon **(A)**.
+- Open the **Putty terminal**, by double clicking on the proper desktop icon **(A)**.
 
     ![](_attachments/desktop.jpg) ![](_attachments/puttyIcon.jpg)
 
-- Highlight the saved session called **wg31_large** **(A)**, and click **Load** **(B)**. Click **Open** **(C)** to open a ssh terminal session to the z/OS host: wg31.
+- CLick on **wg31_large** in the Saved Session table **(A)**, and then click **Load** **(B)**. Click **Open** **(C)** to open a ssh terminal session to the z/OS host: **wg31**.
 
     ![](_attachments/puttySession.jpg)
 
