@@ -1,4 +1,4 @@
-You can use any SQL client tool you like to write SQL queries that use SQL Data Insights. For example, when using a 3270 emulator you could use SQL Processor Using File Input (SPUFI) (1) or Query Management Facility (QMF) (2). Alternatively, from a Windows client you could use a developer Integrated Development Environment (IDE), or an analytics tool like QMF workstation.
+You can use any SQL client tool you like to write SQL queries that use SQL Data Insights. For example, when using a 3270 emulator you could use SQL Processor Using File Input (SPUFI) (1) or Query Management Facility (QMF) (2). Alternatively, from a Windows client you could use a developer Integrated Development Environment (IDE), or an analytics tool like QMF Workstation.
 { .annotate }
 
 1.   SPUFI is a database facility invented by IBM for interfacing with their Db2 system. It is accessed from within TSO ISPF from the DB2I Primary Option menu. SPUFI allows direct input of SQL commands in the TSO environment, rather than having them embedded within a program. Learn more about SPUFI <a href="https://en.wikipedia.org/wiki/IBM_Spufi" target="_blank">here</a>.
@@ -8,17 +8,17 @@ Since you are exploiting AI capabilities, it seems appropriate to use tools that
 
 The Windows image of this demonstration has been pre-installed with Anaconda, Python, Jupyter Notebooks, and several data science libraries. You will invoke Jupyter Notebooks from Microsoft Visual Studio (VS) Code, to build your SQL queries.
 
-- Click the **Visual Studio Code** desktop icon **(A)** to open VS Code.
+- Double click the **Visual Studio Code** desktop icon **(A)** to open VS Code.
 
     ![](_attachments/vsCodeDesktop.jpg)
 
-- Open the **Notebook** named **SQL_Data_Insights.ipynb** if not already open. Click **File** **(A)**, then click **Open File** **(B)**, then click **SQL_Data_Insights.ipynb** **(C)**, and then click **Open** **(D)**.
+- *If note already opened*, open the **Notebook** named **SQL_Data_Insights.ipynb**. Click **File** **(A)**, then click **Open File** **(B)**, then click **SQL_Data_Insights.ipynb** **(C)**, and then click **Open** **(D)**.
 
     ![](_attachments/vsOpenNotebook.jpg)
 
 Once the Notebook renders in VS, you may want to adjust the settings as follows.
 
-- Use ++ctrl+minus++ or ++ctrl+plus++ to adjust the font size of all panels in the display.
+- Use **View->Appearance->Zoom** options to adjust the font size of all panels in the display.
 
 <div class="annotate" markdown>
 - Verify the Python kernel **cw01** loaded **(A)** (1). If needed (or if prompted), click **Restart** **(B)** to restart the kernel (2).

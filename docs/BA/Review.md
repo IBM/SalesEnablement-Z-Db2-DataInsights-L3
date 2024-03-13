@@ -9,7 +9,7 @@ The starting point for this process is that the Business Analyst has performed t
 
 !!! important "Scroll down in the Jupyter Notebook"
 
-    Scroll down further through the Jupyter Notebook to view the data which the Business Analyst has opened. Use the ++ctrl+minus++ or ++ctrl+plus++ keys to adjust the view of the data.
+    Scroll down further through the Jupyter Notebook to view the data which the Business Analyst has opened. Use **View->Appearance->Zoom** options to adjust the font size of all panels in the display.
 
 - Run the cell that starts with **Take a look at the Customer Churn sample dataset** **(A)**.
 

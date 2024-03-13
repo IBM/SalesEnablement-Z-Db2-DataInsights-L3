@@ -1,6 +1,6 @@
 The Database Administrator has already trained the SQL Data Insights model for the **DSNAIDB.CHURN** table. Now, as the Business Analyst, use SQL Data Insights to analyze the data.
 
-- Open SQL Data Insights again from the **Chrome browser** **(A)** and go back to the **AI objects** list by clicking on the **AI objects** hyperlink **(B)**. 
+- Return to SQL Data Insights in the **Chrome browser** **(A)** and click the **AI objects** link **(B)**. 
   
     ![](_attachments/baSQLDI.jpg)
 

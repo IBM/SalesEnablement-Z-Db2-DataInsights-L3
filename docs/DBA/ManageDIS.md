@@ -106,7 +106,7 @@ The list of AI-enabled objects is displayed. This is the administration web page
 
     ![](_attachments/sqldiEnableConfirmation.jpg)
 
-The SQL Data Insights user interface will return to the **AI objects** panel. The **PENGUINS_UNC** table shows a status of **Training**.
+The SQL Data Insights user interface will return to the **AI objects** panel. The **PENGUINS_UNC** table shows a status of **Enabling**.
 
 ![](_attachments/sqldbTraningInProgress.jpg)
 
