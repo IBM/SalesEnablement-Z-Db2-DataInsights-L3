@@ -26,7 +26,6 @@ nav:
     - 'Develop SQL queries to address these requirements': 'BA/Develop.md'
   - 'Setup the environment': 'setupEnv.md'
   - 'Additional resources': 'Resources.md'
-  - 'Test file': 'test.md'
 
 theme:
   name: material
