@@ -8,7 +8,7 @@ Follow the directions below to manage the SQL Data Insights service.
     
     ![](_attachments/googleOpen.jpg)
 
-- If you see a "**Your connection is not private**" message, click **Advanced** **(A)** and then clink the **Proceed** link **(B)** to open the unencrypted connection.
+- If you see a "**Your connection is not private**" message, click **Advanced** **(A)** and then clink the **Proceed to** link **(B)** to open the unencrypted connection.
 
      ![](_attachments/googleException.jpg)
 
@@ -30,7 +30,7 @@ Follow the directions below to manage the SQL Data Insights service.
 
       ![](_attachments/sqldiConsoleSignin.jpg)
 
-- SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with **SSID=DBDG** and **LocationName=DALLASD**. Click the ellipses (![](_attachments/ellipses.png)) at the right-hand side of the DBDG connection **(A)**, and click Connect **(B)** from the dropdown menu.
+- SQL Data Insights has already been configured to access Db2 for z/OS. You will be connecting to a subsystem with **SSID=DBDG** and **LocationName=DALLASD**. Click the **ellipses** (![](_attachments/ellipses.png)) at the right-hand side of the DBDG connection **(A)**, and click **Connect** **(B)** from the dropdown menu.
 
      ![](_attachments/sqldiConnect.jpg)
 
@@ -80,7 +80,7 @@ The list of AI-enabled objects is displayed. This is the administration web page
 
     ![](_attachments/sqldiAddObject.jpg)
 
-- Select the **EXPLORE** schema to filter by **(B)** and click the magnifying glass icon (![](_attachments/magnifyingGlass.png)) **(C)** to list the objects in that schema.
+- Click the **Select schema** pull-down menu, then select the **EXPLORE** schema to filter by **(B)**, and then click the magnifying glass icon (![](_attachments/magnifyingGlass.png)) **(C)** to list the objects in that schema.
 
     ![](_attachments/sqldiExploreBy.jpg)
 
@@ -94,13 +94,17 @@ The list of AI-enabled objects is displayed. This is the administration web page
 
 1.  This is a table with measurements of various penguins in a scientific study in Antarctica, without the species classification field (penguins unclassified). It would be cheating to include the classification field, because you want to assess how well SQL Data Insights can address the classification challenge without any formal data science expertise, and without using the answer.
 
-- Review each of the fields in the table. First, checkmark all **column names** **(A)**. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. Change the **ID** field to the **Key** data type **(B)**. Click **Next** **(C)**.
+- Review each of the fields in the table. First, checkmark all **Column names** **(A)**. Next, you need to tell the SQL Data Insights model training process how to treat each field, according to the available data types: categorical, numerical, and key. Generally string data types should be treated as categorical fields, and numeric data types should be treated as numeric fields. Exception: numeric fields should be defined as categorial if they have a categorial meaning (for example phone numbers, postal codes, etc.), but this is not relevant for this demonstration. Change data type of the **ID** column to **Key** **(B)**. Click **Next** **(C)**.
 
     ![](_attachments/sqldiSelectColumns.jpg)
 
 - Optionally, you can tell SQL Data Insights what values to treat as NULL values and exclude from the model training process. The penguins’ data has very few null values, so you will skip this step and click **Enable** **(A)**.
 
     ![](_attachments/sqldiEnableAIQuery2.jpg)
+
+- Click **Enable** **(A)** to confirm you want to train the model.
+
+    ![](_attachments/sqldiEnableConfirmation.jpg)
 
 The SQL Data Insights user interface will return to the **AI objects** panel. The **PENGUINS_UNC** table shows a status of **Training**.
 
