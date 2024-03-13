@@ -54,4 +54,7 @@ Follow the directions below to start the SQL Data Insights service.
 
     ![](_attachments/sqldiStart.jpg)
 
-    The SQL Data Insights Services runs under Unix System Services (USS), which is why you have started it from the USS command line. It can easily be wrapped in a JCL member and run as a started task with system automation.
+    The SQL Data Insights Services runs under Unix System Services (USS) (1), which is why you have started it from the USS command line. It can easily be wrapped in a JCL member and run as a started task with system automation.
+
+    { .annotate }
+    1.   z/OS USS provides the standard command interface familiar to interactive UNIX users. Learn more about USS <a href="https://www.ibm.com/docs/en/zos/3.1.0?topic=zos-unix-system-services" target="_blank">here</a>.
