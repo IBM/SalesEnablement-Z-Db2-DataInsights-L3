@@ -15,7 +15,7 @@
   
 Artificial Intelligence (AI) has become an essential capability for enterprises to exploit and master. The data that is stored and managed in operational databases contains information that is invaluable to making informed decisions. Sometimes the insights can be extracted using conventional Structured Query Language (SQL) queries. But when the information clients seek is hidden in non-obvious patterns in the data, conventional SQL is not flexible enough to see those patterns.
 
-Db2 for z/OS SQL Data Insights is a transformational technology, that enables Deep Learning AI models to be trained against mainframe data, so that anybody who writes SQL queries can invoke standard SQL functions to understand the data patterns without any need for data science expertise. Db2 for z/OS SQL Data Insights is also called SQL Data Insights through this document.
+Db2 for z/OS SQL Data Insights is a transformational technology, that enables Deep Learning AI models to be trained against mainframe data, so that anybody who writes SQL queries can invoke standard SQL functions to understand the data patterns without any need for data science expertise. Db2 for z/OS SQL Data Insights is also called SQL Data Insights in this document.
 
 The illustration below represents how Db2 for z/OS SQL Data Insights would be used.
 
@@ -40,7 +40,10 @@ This use case applies to IBM clients that have the following environment:
 
 - The subject data should include as many **features** as possible that describe the characteristics of the entity (for example: Client) being studied.
 - Ideally, good or bad outcomes **labels** are included within the data, to provide a focus for AI enabled queries to use.
-- Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible. Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.
+<div class="annotate" markdown>  
+- Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible (1). Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.
+</div>
+1.   IBM z Integrated Information Processor (zIIP) is a dedicated processor designed to operate asynchronously with the general processors in a mainframe to process new workloads; manage containers and hybrid cloud interfaces; facilitate system recovery; and assist with several types of analytics, systems monitoring and other applications. Learn more <a href="https://www.ibm.com/products/z-integrated-information-processor" target="_blank">here</a>.
 
 ^^Other considerations to be evaluated^^
 
