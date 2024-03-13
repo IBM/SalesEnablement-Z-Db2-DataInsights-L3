@@ -33,7 +33,7 @@ Pay particular attention to the **Column discriminator scores** for each of the 
 
     ![](_attachments/baChurnCustomer3668-QPYBK.jpg)
 
-With SQL Data Insights it is easy to find out which customers are most similar to the customer (or cluster of customers) who have churned.
+With SQL Data Insights it is easy to find out which customers that have not yet churned are most similar to the customer (or cluster of customers) who have churned.
 
 - Run the **SQL query** to find customers similar to **Customer 3668-QPYBK** **(A)** based upon the most influential columns mentioned earlier (TOTALCHARGES, PAYMENTMETHOD, MONTHLYCHARGES, and TENURE).
 
