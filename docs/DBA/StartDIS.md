@@ -33,7 +33,7 @@ Follow the directions below to start the SQL Data Insights service.
 - Switch user to **AIDBADM** (1) using the **su** command **(A)**:
 
      ```
-     su - adibadm
+     su - aidbadm
      ```
 
      and enter the password **(B)**:
@@ -46,7 +46,7 @@ Follow the directions below to start the SQL Data Insights service.
 </div>
 1.  **AIDBADM** is the instance owner of the SQL Data Insights instance.
 
-- Stat the SQL Data Insights instance using the command below **(A)**:
+- Start the SQL Data Insights instance using the command below **(A)**:
      
     ```
     sqldi.sh start
