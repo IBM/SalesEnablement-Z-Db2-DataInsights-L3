@@ -728,7 +728,7 @@
 </ul>
 </div>
 <p>Artificial Intelligence (AI) has become an essential capability for enterprises to exploit and master. The data that is stored and managed in operational databases contains information that is invaluable to making informed decisions. Sometimes the insights can be extracted using conventional Structured Query Language (SQL) queries. But when the information clients seek is hidden in non-obvious patterns in the data, conventional SQL is not flexible enough to see those patterns.</p>
-<p>Db2 for z/OS SQL Data Insights is a transformational technology, that enables Deep Learning AI models to be trained against mainframe data, so that anybody who writes SQL queries can invoke standard SQL functions to understand the data patterns without any need for data science expertise. Db2 for z/OS SQL Data Insights is also called SQL Data Insights through this document.</p>
+<p>Db2 for z/OS SQL Data Insights is a transformational technology, that enables Deep Learning AI models to be trained against mainframe data, so that anybody who writes SQL queries can invoke standard SQL functions to understand the data patterns without any need for data science expertise. Db2 for z/OS SQL Data Insights is also called SQL Data Insights in this document.</p>
 <p>The illustration below represents how Db2 for z/OS SQL Data Insights would be used.</p>
 <ul>
 <li>The Clients table holds information about the clients of a business.</li>
@@ -749,8 +749,13 @@
 <ul>
 <li>The subject data should include as many <strong>features</strong> as possible that describe the characteristics of the entity (for example: Client) being studied.</li>
 <li>Ideally, good or bad outcomes <strong>labels</strong> are included within the data, to provide a focus for AI enabled queries to use.</li>
-<li>Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible. Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.</li>
 </ul>
+<div class="annotate">
+<p>- Model training with SQL Data Insights is CPU-intensive but is almost totally zIntegrated Information Processor (zIIP) eligible (1). Available zIIP engines for model training help to avoid unwanted general processor CPU consumption.</p>
+</div>
+<ol>
+<li>IBM z Integrated Information Processor (zIIP) is a dedicated processor designed to operate asynchronously with the general processors in a mainframe to process new workloads; manage containers and hybrid cloud interfaces; facilitate system recovery; and assist with several types of analytics, systems monitoring and other applications. Learn more <a href="https://www.ibm.com/products/z-integrated-information-processor" target="_blank">here</a>.</li>
+</ol>
 <p><ins>Other considerations to be evaluated</ins></p>
 <ul>
 <li>Operational databases tend to store data in multiple different tables, such as with third normal form data models. The objective of such data structures is to separate data into different entities (tables) for flexibility. This is the opposite of what is wanted for machine learning. Clients should consider using SQL views to join data from multiple tables to include all the data fields that are of interest in AI-enabled analysis.</li>
